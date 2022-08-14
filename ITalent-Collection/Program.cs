@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using ITalent_Collection;
+using System.Collections;
 
 Console.WriteLine("Generic Collections");
 //---LIST---
@@ -184,3 +185,29 @@ foreach (DictionaryEntry entry in hashTableList)
 {
     Console.WriteLine(entry.Value);
 }
+
+
+//---OWNLINKEDLIST---
+Console.WriteLine("---OWNLINKEDLIST---");
+//Kendi oluşturduğum Bağıl liste örneği tanımlaması
+var ownLinkedList = new OwnLinkedList<string>();
+
+//Bağıl listenin nodeuna değer ekleme
+ownLinkedList.InsertLast("silgi");
+ownLinkedList.InsertLast("kalem");
+ownLinkedList.InsertLast("defter");
+ownLinkedList.InsertLast("serkan");
+ownLinkedList.InsertLast("canta");
+
+
+//Bağıl listeden indeksdeki nodeu silen fonksiyon
+ownLinkedList.RemoveAt(3);
+
+//Bağıl listeden indeksle veri çeken fonksiyon
+object temp7 = hashTableList[2];
+
+//Bağıl listede ilgili indeksdeki değeri güncelleme
+ownLinkedList[1] = "kutu";
+
+//Bağıl listede ki bütün değerleri yazdırma
+ownLinkedList.ToList().ForEach(x => Console.WriteLine(x));
