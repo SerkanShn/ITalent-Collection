@@ -1,4 +1,6 @@
-﻿
+﻿using System.Collections;
+
+Console.WriteLine("Generic Collections");
 //---LIST---
 Console.WriteLine("---LIST---");
 //String tip tutan bir liste örneği
@@ -92,3 +94,30 @@ floatSortedList[2] = 5.23f;
 
 //SortedListte ki bütün elemanları yazdırma
 floatSortedList.Values.ToList().ForEach(x => Console.WriteLine(x));
+
+
+Console.WriteLine("Non-Generic Collections");
+//---ARRAYLIST---
+Console.WriteLine("---ARRAYLIST---");
+//Bir ArrayList örneği
+var arrayList = new ArrayList();
+
+//ArrayList'e istenilen tipte eleman ekleme
+arrayList.Add("silgi");
+arrayList.Add("kalem");
+arrayList.Add(25);
+arrayList.Add(25.23f);
+arrayList.Add(5.19f);
+arrayList.Add(true);
+
+//Arraylistten indeks vererek değer silme
+arrayList.Remove(3);
+
+//Arraylistten key vererek değer okuma
+object temp4 = arrayList[2];
+
+//Arraylistte indeks vererek değer güncelleme
+arrayList[1] = 12;
+
+//Arraylistteki bütün elemanları yazdırma
+arrayList.ToArray().ToList().ForEach(x => Console.WriteLine(x));
