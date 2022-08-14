@@ -1,4 +1,5 @@
-﻿//---LIST---
+﻿
+//---LIST---
 Console.WriteLine("---LIST---");
 //String tip tutan bir liste örneği
 var stringList = new List<string>();
@@ -63,3 +64,31 @@ stringHashset.Remove("kitap");
 
 //Hashsette ki bütün değerleri yazdırma
 stringHashset.ToList().ForEach(x => Console.WriteLine(x));
+
+
+
+
+
+//---SortedList---
+Console.WriteLine("---SortedList---");
+//Key int ve float tipinde value tutan bir SortedList örneği
+var floatSortedList = new SortedList<int,float>();
+
+//SortedListe key value şeklinde eleman ekleme
+floatSortedList.Add(1, 1.203f);
+floatSortedList.Add(3, 2.2f);
+floatSortedList.Add(5, 22.4f);
+floatSortedList.Add(2, 11.2f);
+floatSortedList.Add(4, 0.67f);
+
+//SortedListden key vererek değer silme
+floatSortedList.Remove(3);
+
+//SortedListden key vererek değer okuma
+float temp3 = floatSortedList[2];
+
+//SortedListde key vererek değeri güncelleme
+floatSortedList[2] = 5.23f;
+
+//SortedListte ki bütün elemanları yazdırma
+floatSortedList.Values.ToList().ForEach(x => Console.WriteLine(x));
