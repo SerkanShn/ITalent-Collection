@@ -1,4 +1,5 @@
 ﻿//---LIST---
+Console.WriteLine("---LIST---");
 //String tip tutan bir liste örneği
 var stringList = new List<string>();
 
@@ -21,7 +22,27 @@ stringList.ForEach(x => Console.WriteLine(x));
 
 
 
+//---Dictionary---
+Console.WriteLine("---DICTIONARY---");
+//Key int ve string tipinde value tutan bir dictionary örneği
+var stringDictionary = new Dictionary<int,string>();
 
+//Dictionarye key value şeklinde eleman ekleme
+stringDictionary.Add(1,"kalem");
+stringDictionary.Add(2,"defter");
+stringDictionary.Add(3,"kitap");
+
+//Dictionaryden key vererek değer silme
+stringDictionary.Remove(1);
+
+//Dictionaryden key vererek değer okuma
+String temp2 = stringDictionary[2];
+
+//Dictionaryde key vererek değeri güncelleme
+stringDictionary[2] = "silgi";
+
+//Dictionaryde ki bütün elemanları yazdırma
+stringDictionary.Values.ToList().ForEach(x => Console.WriteLine(x));
 
 
 
