@@ -121,3 +121,31 @@ arrayList[1] = 12;
 
 //Arraylistteki bütün elemanları yazdırma
 arrayList.ToArray().ToList().ForEach(x => Console.WriteLine(x));
+
+
+//---HASHTABLE---
+Console.WriteLine("---HASHTABLE---");
+//Key istenilen tipte ve istenilen tipte value tutan bir HashTable örneği
+var hashTableList = new Hashtable();
+
+//HashTable'a istenilen tipte key ve value ekleme
+hashTableList.Add(1,"silgi");
+hashTableList.Add(true,"kalem");
+hashTableList.Add(19,25);
+hashTableList.Add(false,25.23f);
+hashTableList.Add("defter",5.19f);
+
+//HashTable key vererek değer silme
+hashTableList.Remove(false);
+
+//HashTable'a key vererek değer okuma
+object temp5 = hashTableList[2];
+
+//HashTable'a key vererek değer güncelleme
+hashTableList[true] = 12;
+
+//Arraylistteki bütün elemanları yazdırma
+foreach (DictionaryEntry entry in hashTableList)
+{
+    Console.WriteLine(entry.Value);
+}
