@@ -23,6 +23,41 @@ stringList[1] = "silgi";
 //Listedeki bütün elemanları yazdırma
 stringList.ForEach(x => Console.WriteLine(x));
 
+//---LINKEDLIST---
+Console.WriteLine("---LINKEDLIST---");
+//String tip tutan bir LinkedList örneği
+var stringLinkedList = new LinkedList<string>();
+
+//LinkedListin sonuna eleman ekleme
+stringLinkedList.AddLast("kitap");
+stringLinkedList.AddLast("kitap2");
+stringLinkedList.AddLast("defter");
+stringLinkedList.AddLast("defter2");
+stringLinkedList.AddLast("kitap");
+stringLinkedList.AddLast("kitap2");
+stringLinkedList.AddLast("kitap3");
+
+//LinkedListin başına eleman ekleme
+stringLinkedList.AddFirst("canta");
+
+//LinkedListden remove fonksiyonu ile eleman çıkarma
+stringLinkedList.Remove("defter");
+
+//LinkedListin ilk elemanını çıkarma
+stringLinkedList.RemoveFirst();
+
+//LinkedListin son elemanını çıkarma
+stringLinkedList.RemoveLast();
+
+//LinkedList değer tutan Nodeu alma
+object temp2 = stringLinkedList.Find("defter");
+
+//LinkedList değer tutan Nodedaki değeri güncelleme
+stringLinkedList.Find("defter2").Value="silgi";
+
+//LinkedListte ki bütün elemanları yazdırma
+stringLinkedList.ToList().ForEach(x => Console.WriteLine(x));
+
 
 
 //---Dictionary---
@@ -39,7 +74,7 @@ stringDictionary.Add(3,"kitap");
 stringDictionary.Remove(1);
 
 //Dictionaryden key vererek değer okuma
-String temp2 = stringDictionary[2];
+String temp3 = stringDictionary[2];
 
 //Dictionaryde key vererek değeri güncelleme
 stringDictionary[2] = "silgi";
@@ -87,7 +122,7 @@ floatSortedList.Add(4, 0.67f);
 floatSortedList.Remove(3);
 
 //SortedListden key vererek değer okuma
-float temp3 = floatSortedList[2];
+float temp4 = floatSortedList[2];
 
 //SortedListde key vererek değeri güncelleme
 floatSortedList[2] = 5.23f;
@@ -114,7 +149,7 @@ arrayList.Add(true);
 arrayList.Remove(3);
 
 //Arraylistten key vererek değer okuma
-object temp4 = arrayList[2];
+object temp5 = arrayList[2];
 
 //Arraylistte indeks vererek değer güncelleme
 arrayList[1] = 12;
@@ -139,7 +174,7 @@ hashTableList.Add("defter",5.19f);
 hashTableList.Remove(false);
 
 //HashTable'a key vererek değer okuma
-object temp5 = hashTableList[2];
+object temp6 = hashTableList[2];
 
 //HashTable'a key vererek değer güncelleme
 hashTableList[true] = 12;
