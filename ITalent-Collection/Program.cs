@@ -46,4 +46,20 @@ stringDictionary.Values.ToList().ForEach(x => Console.WriteLine(x));
 
 
 
+//---HASHSET---
+Console.WriteLine("---HASHSET---");
+//String tipinde değer tutan Hashset örneği
+var stringHashset = new HashSet<string>();
 
+//Hashset'e değer ekleme, birden fazla aynı değer eklenemez. Eklenen elementler uniquedir.
+stringHashset.Add("kalem");
+stringHashset.Add("defter");
+stringHashset.Add("kitap");
+stringHashset.Add("defter");
+stringHashset.Add("kitap");
+
+//Hashset'ten değer silme.
+stringHashset.Remove("kitap");
+
+//Hashsette ki bütün değerleri yazdırma
+stringHashset.ToList().ForEach(x => Console.WriteLine(x));
